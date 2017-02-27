@@ -42,7 +42,7 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		// Check whether if the train has negative velocity
-		else if (referenceSpeed < 0) {űáélűáél
+		else if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		}
 	}
