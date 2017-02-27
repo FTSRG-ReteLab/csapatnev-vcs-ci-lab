@@ -26,6 +26,8 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
+		if(speedLimit < 0)
+			speedLimit = 0;
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 
