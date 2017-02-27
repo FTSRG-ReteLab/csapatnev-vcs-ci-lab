@@ -10,7 +10,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void followSpeed() {
-		//This is the FollowSpeeed asd
+		//This is the Follow2speed
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
