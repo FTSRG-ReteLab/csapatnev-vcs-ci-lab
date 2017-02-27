@@ -32,11 +32,11 @@ public class TrainControllerImpl implements TrainController {
 	}
 
 	private void enforceSpeedLimit() {
+		//Check whether if the speed is too high and limit it.
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
 
-		
 		//Check whether if the train has negative velocity
 		else if (referenceSpeed < 0) {
 			referenceSpeed = 0;
