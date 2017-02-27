@@ -26,20 +26,21 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setSpeedLimit(int speedLimit) {
-		if(speedLimit < 0)
+		if (speedLimit < 0) {
 			speedLimit = 0;
+		}
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
 
 	}
 
 	private void enforceSpeedLimit() {
-		//Check whether if the speed is too high and limit it.
+		// Check whether if the speed is too high and limit it.
 		if (referenceSpeed > speedLimit) {
 			referenceSpeed = speedLimit;
 		}
 
-		//Check whether if the train has negative velocity
+		// Check whether if the train has negative velocity
 		else if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		}
